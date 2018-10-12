@@ -28,5 +28,9 @@ android {
 
 dependencies {
     implementation "androidx.appcompat:appcompat:$jetVersion"
+    implementation "androidx.recyclerview:recyclerview:$jetVersion"
+    implementation "androidx.cardview:cardview:$jetVersion"
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
+
+    implementation 'com.github.bumptech.glide:glide:4.4.0'
 }
