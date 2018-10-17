@@ -19,5 +19,12 @@
         android:padding="@dimen/spacing_micro"
         tools:context=".news.NewsListActivity"
         tools:listitem="@layout/item_news"/>
+
+    <include
+        android:id="@+id/error_layout"
+        layout="@layout/layout_error"
+        android:visibility="gone"/>
+
+
 </FrameLayout>
 

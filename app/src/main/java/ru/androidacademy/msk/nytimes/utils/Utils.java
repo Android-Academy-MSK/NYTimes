@@ -6,7 +6,6 @@ import android.view.View;
 
 import java.util.Date;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import io.reactivex.disposables.Disposable;
 import ru.androidacademy.msk.nytimes.BuildConfig;
@@ -32,7 +31,9 @@ public final class Utils {
         }
     }
 
-    public static void setVisibile(@NonNull View view, boolean show) {
+    public static void setVisible(@Nullable View view, boolean show) {
+        if (view == null) return;
+
         int visibility = show ? View.VISIBLE : View.GONE;
         view.setVisibility(visibility);
     }

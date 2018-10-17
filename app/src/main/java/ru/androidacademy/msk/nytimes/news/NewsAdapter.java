@@ -1,6 +1,7 @@
 package ru.androidacademy.msk.nytimes.news;
 
 import android.content.Context;
+import android.graphics.drawable.TransitionDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
+import com.bumptech.glide.TransitionOptions;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
@@ -34,9 +37,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         this.clickListener = clickListener;
 
         final RequestOptions imageOption = new RequestOptions()
-                .placeholder(R.drawable.image_placeholder)
-                .fallback(R.drawable.image_placeholder)
-                .centerCrop();
+            .placeholder(R.drawable.image_placeholder)
+            .fallback(R.drawable.image_placeholder)
+            .centerCrop();
         this.imageLoader = Glide.with(context).applyDefaultRequestOptions(imageOption);
     }
 
@@ -89,7 +92,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         }
 
         void bind(NewsItem newsItem) {
-            imageLoader.load(newsItem.getImageUrl()).into(imageView);
+            imageLoader.load(newsItem.getImageUrl())
+                       .transition(DrawableTransitionOptions.withCrossFade())
+                       .into(imageView);
             categoryView.setText(newsItem.getCategory().getName());
             titleView.setText(newsItem.getTitle());
             previewView.setText(newsItem.getPreviewText());

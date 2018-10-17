@@ -15,7 +15,7 @@ public final class DataUtils {
     public static List<NewsItem> generateNews() {
         // we are adding this delay to imitate long loading process
         try {
-            Thread.sleep(5000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             if (isDebug()) Log.e(TAG, e.getMessage(), e);
         }
