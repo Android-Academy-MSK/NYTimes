@@ -1,4 +1,4 @@
-package ru.androidacademy.msk.nytimes;
+package ru.androidacademy.msk.nytimes.news;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,16 +6,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.request.RequestOptions;
-import ru.androidacademy.msk.nytimes.data.NewsItem;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+import ru.androidacademy.msk.nytimes.R;
+import ru.androidacademy.msk.nytimes.data.NewsItem;
+import ru.androidacademy.msk.nytimes.utils.Utils;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     private final List<NewsItem> items = new ArrayList<>();

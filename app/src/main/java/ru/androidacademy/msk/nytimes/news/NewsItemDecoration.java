@@ -1,7 +1,8 @@
-package ru.androidacademy.msk.nytimes;
+package ru.androidacademy.msk.nytimes.news;
 
 import android.graphics.Rect;
 import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 

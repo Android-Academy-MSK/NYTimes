@@ -1,4 +1,4 @@
-package ru.androidacademy.msk.nytimes;
+package ru.androidacademy.msk.nytimes.details;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +10,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
+
+import ru.androidacademy.msk.nytimes.R;
 import ru.androidacademy.msk.nytimes.data.NewsItem;
+import ru.androidacademy.msk.nytimes.utils.Utils;
 
 public class NewsDetailsActivity extends AppCompatActivity {
     private static final String EXTRA_NEWS_ITEM = "extra:newsItem";

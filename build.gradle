@@ -3,6 +3,9 @@
 buildscript {
     ext {
         jetVersion = '1.0.0'
+        rxjava = "2.2.2"
+        rxandroid = "2.1.0"
+        glide = "4.8.0"
     }
 
     repositories {
