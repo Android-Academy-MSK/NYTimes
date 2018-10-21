@@ -22,6 +22,10 @@
         </activity>
 
         <activity android:name=".details.NewsDetailsActivity" />
+        <activity android:name=".AboutActivity"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
     </application>
 
 </manifest>

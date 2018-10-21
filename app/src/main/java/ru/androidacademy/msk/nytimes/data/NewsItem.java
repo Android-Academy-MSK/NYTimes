@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 public class NewsItem implements Serializable {
 
@@ -59,5 +60,37 @@ public class NewsItem implements Serializable {
     public String getFullText() {
         return fullText;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        NewsItem newsItem = (NewsItem) o;
+        return Objects.equals(title, newsItem.title) &&
+            Objects.equals(imageUrl, newsItem.imageUrl) &&
+            Objects.equals(category, newsItem.category) &&
+            Objects.equals(publishDate, newsItem.publishDate) &&
+            Objects.equals(previewText, newsItem.previewText) &&
+            Objects.equals(fullText, newsItem.fullText);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(title, imageUrl, category, publishDate, previewText, fullText);
+    }
+
+    @Override
+    public String toString() {
+        return "NewsItem{" +
+            "title='" + title + '\'' +
+            ", imageUrl='" + imageUrl + '\'' +
+            ", category=" + category +
+            ", publishDate=" + publishDate +
+            ", previewText='" + previewText + '\'' +
+            ", fullText='" + fullText + '\'' +
+            '}';
+    }
+
 }
 

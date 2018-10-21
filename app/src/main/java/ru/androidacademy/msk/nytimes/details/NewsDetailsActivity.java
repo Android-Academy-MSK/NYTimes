@@ -19,6 +19,7 @@ import ru.androidacademy.msk.nytimes.data.NewsItem;
 import ru.androidacademy.msk.nytimes.utils.Utils;
 
 public class NewsDetailsActivity extends AppCompatActivity {
+
     private static final String EXTRA_NEWS_ITEM = "extra:newsItem";
 
     @Override
@@ -58,4 +59,5 @@ public class NewsDetailsActivity extends AppCompatActivity {
     public static void start(@NonNull Context context, @NonNull NewsItem newsItem) {
         context.startActivity(new Intent(context, NewsDetailsActivity.class).putExtra(EXTRA_NEWS_ITEM, newsItem));
     }
+
 }

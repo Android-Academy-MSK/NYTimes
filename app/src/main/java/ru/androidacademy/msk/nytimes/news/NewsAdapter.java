@@ -25,6 +25,7 @@ import ru.androidacademy.msk.nytimes.data.NewsItem;
 import ru.androidacademy.msk.nytimes.utils.Utils;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
+
     private final List<NewsItem> items = new ArrayList<>();
 
     private final LayoutInflater inflater;
@@ -101,4 +102,5 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
             dateView.setText(Utils.formatDateTime(itemView.getContext(), newsItem.getPublishDate()));
         }
     }
+
 }
