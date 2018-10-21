@@ -1,6 +1,10 @@
 package ru.androidacademy.msk.nytimes;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -31,4 +35,22 @@ public class NewsListActivity extends AppCompatActivity {
 
         adapter.replaceItems(DataUtils.generateNews());
     }
+
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_option, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected ( MenuItem item ) {
+        switch ( item.getItemId () ) {
+            case R.id.about_activity:
+                startActivity ( new Intent( this , AboutActivity.class ) );
+            default:
+                return super.onOptionsItemSelected ( item );
+        }
+
+    }
+
 }

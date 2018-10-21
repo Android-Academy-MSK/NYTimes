@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">NYTimes</string>
+
+    <string name="about_screen">About</string>
+    <string name="about_photo_description">Photo</string>
+    <string name="about_job_description">Job image</string>
+    <string name="about_arch_description">Architecture image</string>
+    <string name="about_father_description">Father image</string>
+    <string name="about_job_title">KasperskyLab</string>
+    <string name="about_arch_title">Architecture fun</string>
+    <string name="about_father_title">Happy daddy</string>
+    <string name="about_bio">
+        Eugene has been engaging in Android development since 2012. At the moment he heads team of Kaspersy Internet Security of Android.
+        He is author of many articles and lectures about Clean architecture, Multimodality architecture, Dagger 2 and RxJava.
+        Also he is known as a creator of big community of architecture funs - chat in Telegram "Android Architecture".
+    </string>
+    <string name="about_message_hint">Enter a message</string>
+    <string name="about_message_send">Send message</string>
+    <string name="about_github_description">Github image</string>
+    <string name="about_linkedin_description">LinkedIn image</string>
+    <string name="about_telegram_description">Telegram image</string>
+    <string name="about_send_email_empty_error">Empty text. Please input text</string>
+    <string name="about_send_email_title">Email</string>
+    <string name="about_send_email_no_clients_error">Sorry. You don\'t have any email client</string>
+    <string name="about_send_open_app_error">Sorry. You don\'t have an appropriate client</string>
+    <string name="about_title">Eugene Matsyuk</string>
+
+    <string name="telegram_url" translatable="false">https://t.me/Android_Architecture</string>
+    <string name="linkedin_url" translatable="false">https://www.linkedin.com/in/евгений-мацюк-a6537241/</string>
+    <string name="github_url" translatable="false">https://github.com/matzuk</string>
 </resources>

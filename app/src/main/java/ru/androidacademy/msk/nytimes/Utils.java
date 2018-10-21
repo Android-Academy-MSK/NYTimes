@@ -8,6 +8,7 @@ import java.util.Date;
 import static android.text.format.DateUtils.*;
 
 public final class Utils {
+
     public static CharSequence formatDateTime(Context context, Date dateTime) {
         return DateUtils.getRelativeDateTimeString(
                 context,
@@ -21,4 +22,5 @@ public final class Utils {
     private Utils() {
         throw new AssertionError("No instances");
     }
+
 }

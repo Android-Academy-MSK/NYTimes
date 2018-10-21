@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 class NewsItemDecoration extends RecyclerView.ItemDecoration {
+
     private final int offset;
 
     public NewsItemDecoration(int offset) {
@@ -24,4 +25,5 @@ class NewsItemDecoration extends RecyclerView.ItemDecoration {
             outRect.set(0, 0, 0, 0);
         }
     }
+
 }
