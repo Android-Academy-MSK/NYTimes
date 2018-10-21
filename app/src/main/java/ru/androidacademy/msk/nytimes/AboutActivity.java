@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -15,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class AboutActivity extends AppCompatActivity {
 
     private static final String MAIL_TO_URI = "mailto";
-    private ScrollView mainLayout;
+    private RelativeLayout mainLayout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
