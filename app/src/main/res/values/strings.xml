@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">NYTimes</string>
+    <string name="app_name" translatable="false">NYTimes</string>
+    <string name="error_message">Loading news was unsuccessful</string>
+    <string name="action_retry">Retry</string>
+    <string name="cont_descr_decoration" translatable="false">Decoration</string>
 </resources>

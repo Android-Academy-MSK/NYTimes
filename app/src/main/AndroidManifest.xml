@@ -14,14 +14,14 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".NewsListActivity">
+        <activity android:name=".news.NewsListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".NewsDetailsActivity" />
+        <activity android:name=".details.NewsDetailsActivity" />
     </application>
 
 </manifest>

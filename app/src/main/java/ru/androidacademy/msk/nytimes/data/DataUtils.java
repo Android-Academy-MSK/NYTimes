@@ -1,13 +1,24 @@
 package ru.androidacademy.msk.nytimes.data;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+import static ru.androidacademy.msk.nytimes.utils.Utils.isDebug;
+
 public final class DataUtils {
+    private static final String TAG = DataUtils.class.getSimpleName();
 
     public static List<NewsItem> generateNews() {
+        // we are adding this delay to imitate long loading process
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            if (isDebug()) Log.e(TAG, e.getMessage(), e);
+        }
         final Category darwinAwards = new Category(1, "Darwin Awards");
         final Category criminal = new Category(2, "Criminal");
         final Category animals = new Category(3, "Animals");

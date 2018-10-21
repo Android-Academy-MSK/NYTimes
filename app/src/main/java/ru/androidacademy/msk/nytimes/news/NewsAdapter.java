@@ -1,21 +1,28 @@
-package ru.androidacademy.msk.nytimes;
+package ru.androidacademy.msk.nytimes.news;
 
 import android.content.Context;
+import android.graphics.drawable.TransitionDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
+import com.bumptech.glide.TransitionOptions;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
-import ru.androidacademy.msk.nytimes.data.NewsItem;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+import ru.androidacademy.msk.nytimes.R;
+import ru.androidacademy.msk.nytimes.data.NewsItem;
+import ru.androidacademy.msk.nytimes.utils.Utils;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     private final List<NewsItem> items = new ArrayList<>();
@@ -30,9 +37,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         this.clickListener = clickListener;
 
         final RequestOptions imageOption = new RequestOptions()
-                .placeholder(R.drawable.image_placeholder)
-                .fallback(R.drawable.image_placeholder)
-                .centerCrop();
+            .placeholder(R.drawable.image_placeholder)
+            .fallback(R.drawable.image_placeholder)
+            .centerCrop();
         this.imageLoader = Glide.with(context).applyDefaultRequestOptions(imageOption);
     }
 
@@ -85,7 +92,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         }
 
         void bind(NewsItem newsItem) {
-            imageLoader.load(newsItem.getImageUrl()).into(imageView);
+            imageLoader.load(newsItem.getImageUrl())
+                       .transition(DrawableTransitionOptions.withCrossFade())
+                       .into(imageView);
             categoryView.setText(newsItem.getCategory().getName());
             titleView.setText(newsItem.getTitle());
             previewView.setText(newsItem.getPreviewText());
