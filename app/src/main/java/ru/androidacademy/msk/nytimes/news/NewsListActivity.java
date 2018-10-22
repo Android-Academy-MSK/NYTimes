@@ -1,7 +1,10 @@
 package ru.androidacademy.msk.nytimes.news;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -17,6 +20,7 @@ import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
+import ru.androidacademy.msk.nytimes.about.AboutActivity;
 import ru.androidacademy.msk.nytimes.R;
 import ru.androidacademy.msk.nytimes.data.DataUtils;
 import ru.androidacademy.msk.nytimes.data.NewsItem;
@@ -75,6 +79,23 @@ public class NewsListActivity extends AppCompatActivity {
 
         Utils.disposeSafe(disposable);
         disposable = null;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_option, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected ( MenuItem item ) {
+        switch ( item.getItemId () ) {
+            case R.id.about_activity:
+                startActivity ( new Intent( this , AboutActivity.class ) );
+            default:
+                return super.onOptionsItemSelected ( item );
+        }
+
     }
 
     @Override

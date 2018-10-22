@@ -1,4 +1,4 @@
-package ru.androidacademy.msk.nytimes;
+package ru.androidacademy.msk.nytimes.about;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,6 +11,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import ru.androidacademy.msk.nytimes.R;
 
 public class AboutActivity extends AppCompatActivity {
 
