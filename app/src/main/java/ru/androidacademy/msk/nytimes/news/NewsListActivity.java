@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
@@ -26,14 +25,13 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import ru.androidacademy.msk.nytimes.R;
 import ru.androidacademy.msk.nytimes.about.AboutActivity;
-import ru.androidacademy.msk.nytimes.data.network.models.NewsCategory;
-import ru.androidacademy.msk.nytimes.news.adapter.recycler.NewsItem;
 import ru.androidacademy.msk.nytimes.data.network.RestApi;
+import ru.androidacademy.msk.nytimes.data.network.models.NewsCategory;
 import ru.androidacademy.msk.nytimes.data.network.models.dto.NewsDTO;
-import ru.androidacademy.msk.nytimes.data.network.models.dto.NewsSections;
 import ru.androidacademy.msk.nytimes.data.network.models.dto.TopStoriesResponse;
 import ru.androidacademy.msk.nytimes.details.NewsDetailsActivity;
 import ru.androidacademy.msk.nytimes.news.adapter.recycler.NewsAdapter;
+import ru.androidacademy.msk.nytimes.news.adapter.recycler.NewsItem;
 import ru.androidacademy.msk.nytimes.news.adapter.recycler.NewsItemDecoration;
 import ru.androidacademy.msk.nytimes.news.adapter.spinner.CategoriesSpinnerAdapter;
 import ru.androidacademy.msk.nytimes.utils.Utils;
@@ -116,16 +114,15 @@ public final class NewsListActivity extends AppCompatActivity {
         final Disposable disposable = RestApi.getInstance()
                 .topStories()
                 .get(category)
+                .map(response -> TopStoriesMapper.map(response.getNews()))
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::setupNews, this::handleError);
         compositeDisposable.add(disposable);
     }
 
-    private void setupNews(TopStoriesResponse topStoriesResponse) {
+    private void setupNews(List<NewsItem> newsItems) {
         showProgress(false);
-        final List<NewsDTO> newsDtos = topStoriesResponse.getNews();
-        final List<NewsItem> newsItems = TopStoriesMapper.map(newsDtos);
         updateItems(newsItems);
     }
 
