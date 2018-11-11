@@ -7,7 +7,6 @@ import android.view.View;
 import java.util.Date;
 
 import androidx.annotation.Nullable;
-import io.reactivex.disposables.Disposable;
 import ru.androidacademy.msk.nytimes.BuildConfig;
 
 import static android.text.format.DateUtils.DAY_IN_MILLIS;
@@ -23,12 +22,6 @@ public final class Utils {
             5 * DAY_IN_MILLIS,
             FORMAT_ABBREV_RELATIVE
         );
-    }
-
-    public static void disposeSafe(@Nullable Disposable disposable) {
-        if (disposable != null && !disposable.isDisposed()) {
-            disposable.dispose();
-        }
     }
 
     public static void setVisible(@Nullable View view, boolean show) {

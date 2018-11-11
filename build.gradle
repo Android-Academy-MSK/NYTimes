@@ -6,6 +6,8 @@ buildscript {
         rxjava = "2.2.2"
         rxandroid = "2.1.0"
         glide = "4.8.0"
+        retrofit = "2.4.0"
+        okHttp = "3.6.0"
     }
 
     repositories {

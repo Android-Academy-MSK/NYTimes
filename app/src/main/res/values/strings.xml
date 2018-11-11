@@ -33,4 +33,32 @@
     <string name="telegram_url" translatable="false">https://t.me/Android_Architecture</string>
     <string name="linkedin_url" translatable="false">https://www.linkedin.com/in/евгений-мацюк-a6537241/</string>
     <string name="github_url" translatable="false">https://github.com/matzuk</string>
+
+
+    <string name="top_stories_category_home">Home</string>
+    <string name="top_stories_category_opinion">Opinion</string>
+    <string name="top_stories_category_world">World</string>
+    <string name="top_stories_category_national">National</string>
+    <string name="top_stories_category_politics">Politics</string>
+    <string name="top_stories_category_upshot">Upshot</string>
+    <string name="top_stories_category_nyregion">NY region</string>
+    <string name="top_stories_category_business">Business</string>
+    <string name="top_stories_category_technology">Technology</string>
+    <string name="top_stories_category_science">Science</string>
+    <string name="top_stories_category_health">Health</string>
+    <string name="top_stories_category_sports">Sports</string>
+    <string name="top_stories_category_arts">Arts</string>
+    <string name="top_stories_category_books">Books</string>
+    <string name="top_stories_category_movies">Movies</string>
+    <string name="top_stories_category_theater">Theater</string>
+    <string name="top_stories_category_sundayreview">Sunday review</string>
+    <string name="top_stories_category_fashion">Fashion</string>
+    <string name="top_stories_category_tmagazine">T-magazine</string>
+    <string name="top_stories_category_food">Food</string>
+    <string name="top_stories_category_travel">Travel</string>
+    <string name="top_stories_category_magazine">Magazine</string>
+    <string name="top_stories_category_realestate">Real estate</string>
+    <string name="top_stories_category_automobiles">Automobiles</string>
+    <string name="top_stories_category_obituaries">Obituaries</string>
+    <string name="top_stories_category_insider">Insider</string>
 </resources>
