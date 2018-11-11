@@ -30,9 +30,9 @@ public class NewsDetailsActivity extends AppCompatActivity {
         final WebView webView = findViewById(R.id.web_view);
 
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle(newsItem.getCategory());
         webView.loadUrl(newsItem.getUrl());
     }
+
 
     @Override
     public boolean onSupportNavigateUp() {
